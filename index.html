@@ -1,77 +1,78 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-* {
-  box-sizing: border-box;
-}
-.menu {
-  float:left;
-  width:20%;
-  text-align:center;
-}
-.menu a {
-  background-color:#e5e5e5;
-  padding:8px;
-  margin-top:7px;
-  display:block;
-  width:100%;
-  color:black;
-}
-.main {
-  float:left;
-  width:60%;
-  padding:0 20px;
-}
-.right {
-  background-color:#e5e5e5;
-  float:left;
-  width:20%;
-  padding:15px;
-  margin-top:7px;
-  text-align:center;
-}
-
-@media only screen and (max-width:620px) {
-  /* For mobile phones: */
-  .menu, .main, .right {
-    width:100%;
-  }
-}
-</style>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>HTML and CSS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!--?????-->
+  <link rel="stylesheet" type="text/css" media="all" href="css/style.css">
+  <!--??????-->
 </head>
-<body style="font-family:Verdana;color:#aaaaaa;">
+<body>
 
-<div style="background-color:#e5e5e5;padding:15px;text-align:center;">
-  <h1>Hello World</h1>
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                      
+      </button>
+      <a class="navbar-brand" href="#">Me</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://www.w3schools.com/tags/tag_div.ASP">< div ></a></li>
+        <li><a href="https://www.w3schools.com/tags/tag_span.asp">< span ></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid bg-1 text-center">
+  <h3>What is CSS?</h3>
+   <a href = "https://www.w3schools.com/css/css_intro.asp"><img src="images/Screenshot_5.jpg" class="img_css" style="display:inline" alt="HTML" width="350" height="350"></a>
+  <p>CSS stands for Cascading Style Sheets. It describes how HTML elements are to be displayed on screen, paper, or in other media. </p>
+  <p> Click on the image above. </p>
 </div>
 
-<div style="overflow:auto">
-  <div class="menu">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-    <a href="#">Link 4</a>
-  </div>
+<div class="container-fluid bg-2 text-center">
+  <h3>How can I learn it?</h3>
+  <p> Just go to  <a href="https://www.w3schools.com">www.w3schools.com</a> </p>
+  <a href="#" class="btn btn-default btn-lg">
+    <span class="glyphicon glyphicon-search"></span> Search
+  </a>
+</div>
 
-  <div class="main">
-    <h2>Lorum Ipsum</h2>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-  </div>
-
-  <div class="right">
-    <h2>About</h2>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+<div class="container-fluid bg-3 text-center">    
+  <h3>Some CSS features</h3><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <h4><a href="https://www.w3schools.com/css/css3_transitions.asp">Transitions</a></h4>
+      <p>The most basic way, how to animate your images is animate with transition. It enable you to define the transition between two states of an element.</p>
+      <img class="img_1" src="images/Screenshot_1.jpg" alt="Image">
+    </div>
+      
+    <div class="col-sm-4"> 
+      <h4><a href="https://www.w3schools.com/css/css3_animations.asp">Animation</a></h4>
+      <p> To attract reader's attention we can animate our images. In order to do this we have to learn about animation and <a href="https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp">@keyframes</a>.</p>
+      <img class = "img_2" src="images\Screenshot_2.jpg" alt="Image">
+    </div>
+      
+    <div class="col-sm-4"> 
+        <h4><a href="https://www.w3schools.com/cssref/css3_pr_clip-path.asp"> Clip-path Property</a></h4>
+      <p> clip-path property is useful tool that can be used as simple but beautiful design for images. The easiest shape is circle, but if you want to create something more complex you can use <a href="https://bennettfeely.com/clippy/">this site</a>. </p>
+      <img class = "img_3" src="images/Screenshot_4.jpg" alt="Image">
+    </div>
   </div>
 </div>
 
-<div style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;">© copyright w3schools.com</div>
+<footer class="container-fluid bg-4 text-center">
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p> 
+</footer>
 
 </body>
 </html>
