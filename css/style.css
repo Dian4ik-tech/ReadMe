@@ -1,0 +1,76 @@
+
+
+.bg-1 { 
+    background-color: #B969FF;
+    color: #ffffff;
+  }
+  .bg-2 { 
+    background-color: #9871F6;
+    color: #ffffff;
+  }
+  .bg-3 { 
+    background-color: #C3AAFF;
+    color: #555555;
+  }
+  .bg-4 { 
+    background-color: #6325F9;
+    color: #fff;
+  }
+  .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+    color: #1abc9c !important;
+  }
+  .img_3{
+      -webkit-clip-path: polygon(50% 0%, 71% 26%, 98% 35%, 80% 63%, 79% 91%, 49% 80%, 21% 91%, 20% 60%, 2% 35%, 31% 24%);
+      height: 300px;
+      width: 300px;
+  }
+  .img_css{
+      height: 100px;
+      width: 200px;
+  }
+  .img_1{
+      height: 300px;
+      width: 300px;
+      transition: transform 2s;
+  }
+  .img_1:hover{
+      transform: scale(1.2);
+  }
+  
+  .img_2 {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    animation-name: mymove;
+    animation: mymove 5s linear infinite;
+  }
+  @keyframes mymove {
+    0%   {top: 0px;}
+    25%  {top: 190px;}
+    75%  {top: 50px;}
+    100% {top: 0px;}
+  }
+  /*
+   
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 20, 2021, 3:34:49 AM
+    Author     : dskor
+*/
+
