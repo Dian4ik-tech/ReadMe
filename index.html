@@ -29,8 +29,10 @@ and open the template in the editor.
                     return array;
                   }
                 var count = 0;
+                var characters_1 = {"阿姨":"āyí", "啊":"a","矮": "ǎi", "爱":"ài",
+                    "爱好":"àihào","安静":"ānjìng","班":"bān","半":"bàn","办法":"bànfǎ","帮忙":"bāngmáng"};
                 var characters = ["阿姨", "啊", "矮", "爱", "爱好", "安静","班", "半", "办法", "帮忙"];
-                var pinyin = ["āyí", "a", "ǎi", "ài","àihào", "	ānjìng","bān","bàn", "bànfǎ", "bāngmáng"];
+                var pinyin = [ "āyí", "a", "ǎi", "ài","àihào", "ānjìng","bān","bàn", "bànfǎ", "bāngmáng"];
             function myFunction() {
                 if (count!==0) { 
                     var list = document.getElementsByClassName("ButtOn");
@@ -49,9 +51,13 @@ and open the template in the editor.
                     var final_div = document.createElement("div");
                     final_div.className = "fDiv";
                     var number_array = [];
+                    var numb_array = [];
                     for(var n=0;n < Math.floor(number*number/2);n++){
-                                number_array.push(n);
-                                number_array.push(n);
+                                while(number_array.includes(rnd)){
+                                   var rnd = Math.floor(Math.random()*10);  
+                                }
+                                number_array.push(rnd);
+                                number_array.push(rnd);
                             }//creates the array with numbers, where every number is reapeated twice
                     var new_array = shuffle(number_array);
                     for (j=0; j< number;j++){
@@ -64,7 +70,17 @@ and open the template in the editor.
     //                            var rand = Math.random() * number;
     //                            rand_numbers[rand]+=1;
     //                        }
-                            var text = document.createTextNode(new_array[j*number+i]);
+                            var numb = new_array[j*number+i];
+                            if(numb_array.includes(numb)&&numb_array.includes(numb*10)){
+                                
+                            }else if(numb_array.includes(numb)){
+                                var text = document.createTextNode(pinyin[numb]);
+                                numb_array.push(numb*10);
+                            }else{
+                                var text = document.createTextNode(characters[numb]);
+                                numb_array.push(numb);
+                            }
+                            console.log(numb);
                             button.appendChild(text);
                             newDiv.appendChild(button);
 
