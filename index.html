@@ -32,7 +32,7 @@ and open the template in the editor.
                 var characters_1 = {"阿姨":"āyí", "啊":"a","矮": "ǎi", "爱":"ài",
                     "爱好":"àihào","安静":"ānjìng","班":"bān","半":"bàn","办法":"bànfǎ","帮忙":"bāngmáng"};
                 var characters = ["阿姨", "啊", "矮", "爱", "爱好", "安静","班", "半", "办法", "帮忙"];
-                var pinyin = [ "āyí", "a", "ǎi", "ài","àihào", "ānjìng","bān","bàn", "bànfǎ", "bāngmáng"];
+                var pinyin = [ "āyí", "a", "ǎi", "ài","àihào", "ānjìng","bān","bàn", "bànfǎ", "bāngmáng"];//
             function myFunction() {
                 if (count!==0) { 
                     var list = document.getElementsByClassName("ButtOn");
@@ -54,7 +54,7 @@ and open the template in the editor.
                     var numb_array = [];
                     for(var n=0;n < Math.floor(number*number/2);n++){
                                 while(number_array.includes(rnd)){
-                                   var rnd = Math.floor(Math.random()*10);  
+                                   var rnd = Math.floor(Math.random()*9);  
                                 }
                                 number_array.push(rnd);
                                 number_array.push(rnd);
@@ -71,9 +71,10 @@ and open the template in the editor.
     //                            rand_numbers[rand]+=1;
     //                        }
                             var numb = new_array[j*number+i];
-                            if(numb_array.includes(numb)&&numb_array.includes(numb*10)){
-                                
-                            }else if(numb_array.includes(numb)){
+//                            if(numb_array.includes(numb)&&numb_array.includes(numb*10)){
+//                                
+//                            }else 
+                            if(numb_array.includes(numb)){
                                 var text = document.createTextNode(pinyin[numb]);
                                 numb_array.push(numb*10);
                             }else{
