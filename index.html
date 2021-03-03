@@ -50,18 +50,18 @@ and open the template in the editor.
                 if(number%2===0){
                     var final_div = document.createElement("div");
                     final_div.className = "fDiv";
-                    var number_array = [];
+                    var number_array = [2,2];
                     var numb_array = [];
                     for(var n=0;n < Math.floor(number*number/2);n++){
-                                while(number_array.includes(rnd)){
-                                   var rnd = Math.floor(Math.random()*8);  
-                                }
+                                do{
+                                   var rnd = Math.floor(Math.random()*10);  
+                                }while(number_array.includes(rnd))
                                 number_array.push(rnd);
                                 number_array.push(rnd);
                                 console.log(rnd);
                             }//creates the array with numbers, where every number is reapeated twice
-                    //var new_array = shuffle(number_array);
-                    var new_array = number_array;
+                    var new_array = shuffle(number_array);
+                    //var new_array = number_array;
                     for (j=0; j< number;j++){
        //               var nosauk="lauk"+j;
                         var newDiv = document.createElement("div");
@@ -83,6 +83,7 @@ and open the template in the editor.
                                 numb_array.push(numb*10);
                             }else{
                                 var text = document.createTextNode(characters[numb]);
+                                //button.innerHTML = '<img src="images/"+characters[numb+".png"]>';
                                 numb_array.push(numb);
                             }
                             //console.log(numb);
