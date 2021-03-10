@@ -28,6 +28,9 @@ and open the template in the editor.
 
                     return array;
                   }
+                function flip(id){
+                    document.getElementById("button"+"id").style.backgroundColor="white";
+                }
                 var count = 0;
                 var characters_1 = {"阿姨":"āyí", "啊":"a","矮": "ǎi", "爱":"ài",
                     "爱好":"àihào","安静":"ānjìng","班":"bān","半":"bàn","办法":"bànfǎ","帮忙":"bāngmáng"};
@@ -58,7 +61,7 @@ and open the template in the editor.
                                 }while(number_array.includes(rnd))
                                 number_array.push(rnd);
                                 number_array.push(rnd);
-                                console.log(rnd);
+                                //console.log(rnd);
                             }//creates the array with numbers, where every number is reapeated twice
                     var new_array = shuffle(number_array);
                     //var new_array = number_array;
@@ -68,6 +71,7 @@ and open the template in the editor.
                         for (i = 0; i < number; i++) {
                             var button = document.createElement('BUTTON');
                             button.className = "ButtOn";
+                            //
     //                        while(rand_numbers!==rand||rand_numbers[rand]<2){
     //                            var rand = Math.random() * number;
     //                            rand_numbers[rand]+=1;
@@ -83,24 +87,32 @@ and open the template in the editor.
                                 numb_array.push(numb*10);
                             }else{
                                 var text = document.createTextNode(characters[numb]);
-                                //button.innerHTML = '<img src="images/"+characters[numb+".png"]>';
+                                //button.innerHTML = '<img src="images/"+characters[numb]+".jpg"]>';
                                 numb_array.push(numb);
                             }
                             //console.log(numb);
+                            //button.onclick = flip(j*number+i);
                             button.appendChild(text);
                             newDiv.appendChild(button);
-
-                        }
+                            
+                        }       
                         final_div.appendChild(newDiv);
                         document.body.appendChild(final_div); 
                         var percents=Math.floor(screen.height/number)-10;
                         var buttons = document.getElementsByClassName("ButtOn");
+                        console.log(buttons.length);
                         for(var i = 0; i<buttons.length; i++){
                             buttons[i].style.width = percents+"px";
                             buttons[i].style.height = percents+"px";
+                            buttons[i].style.backgroundColor="black";
+                            buttons[i].id="button"+(j*number+i);
+                            
                         }
+                        
                     };
+                    
                 }
+            
                 count++;
             }</script>         
     </head>
