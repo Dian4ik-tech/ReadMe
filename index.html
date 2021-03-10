@@ -28,9 +28,7 @@ and open the template in the editor.
 
                     return array;
                   }
-                function flip(id){
-                    document.getElementById("button"+"id").style.backgroundColor="white";
-                }
+                
                 var count = 0;
                 var characters_1 = {"阿姨":"āyí", "啊":"a","矮": "ǎi", "爱":"ài",
                     "爱好":"àihào","安静":"ānjìng","班":"bān","半":"bàn","办法":"bànfǎ","帮忙":"bāngmáng"};
@@ -91,7 +89,10 @@ and open the template in the editor.
                                 numb_array.push(numb);
                             }
                             //console.log(numb);
-                            //button.onclick = flip(j*number+i);
+                            button.onclick = ()=>{
+                                button.style.backgroundColor="white";
+                            }
+                            
                             button.appendChild(text);
                             newDiv.appendChild(button);
                             
@@ -101,16 +102,16 @@ and open the template in the editor.
                         var percents=Math.floor(screen.height/number)-10;
                         var buttons = document.getElementsByClassName("ButtOn");
                         console.log(buttons.length);
-                        for(var i = 0; i<buttons.length; i++){
-                            buttons[i].style.width = percents+"px";
-                            buttons[i].style.height = percents+"px";
-                            buttons[i].style.backgroundColor="black";
-                            buttons[i].id="button"+(j*number+i);
-                            
-                        }
+                        
                         
                     };
-                    
+                    for(var i = 0; i<buttons.length; i++){
+                        buttons[i].style.width = percents+"px";
+                        buttons[i].style.height = percents+"px";
+                        buttons[i].style.backgroundColor="black";
+                        buttons[i].id="button"+(i);
+                        console.log(buttons[i].id);
+                    } 
                 }
             
                 count++;
