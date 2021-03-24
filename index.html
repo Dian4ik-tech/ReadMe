@@ -30,6 +30,7 @@ and open the template in the editor.
                   }
                 
                 var count = 0;
+                var new_array = new Array;
                 var characters_1 = {"阿姨":"āyí", "啊":"a","矮": "ǎi", "爱":"ài",
                     "爱好":"àihào","安静":"ānjìng","班":"bān","半":"bàn","办法":"bànfǎ","帮忙":"bāngmáng"};
                 var characters = ["阿姨", "啊", "矮", "爱", "爱好", "安静","班", "半", "办法", "帮忙"];
@@ -67,7 +68,8 @@ and open the template in the editor.
        //               var nosauk="lauk"+j;
                         var newDiv = document.createElement("div");
                         for (i = 0; i < number; i++) {
-                            var button = document.createElement('BUTTON');
+                            let button = document.createElement('BUTTON');
+                            
                             button.className = "ButtOn";
                             //
     //                        while(rand_numbers!==rand||rand_numbers[rand]<2){
@@ -88,9 +90,30 @@ and open the template in the editor.
                                 //button.innerHTML = '<img src="images/"+characters[numb]+".jpg"]>';
                                 numb_array.push(numb);
                             }
-                            //console.log(numb);
+                            console.log(numb_array);
+                            var odd_or_even = 1;
                             button.onclick = ()=>{
+                                console.log(numb);
+                                var ore = odd_or_even%2;
                                 button.style.backgroundColor="white";
+                                if(ore==0){
+                                    var first =new_array.pop();
+                                    var second= new_array.pop();
+                                    console.log(first);
+                                    console.log(second);
+                                    if(first!==second){
+                                        setTimeout(function(){
+                                    button.style.backgroundColor = "black";
+                                },500);
+                                    }
+                                }
+                                else{
+                                    new_array.push(numb);
+                                }
+                                
+                                
+                                //console.log(odd_or_even);
+                                odd_or_even++;
                             }
                             
                             button.appendChild(text);
@@ -101,7 +124,7 @@ and open the template in the editor.
                         document.body.appendChild(final_div); 
                         var percents=Math.floor(screen.height/number)-10;
                         var buttons = document.getElementsByClassName("ButtOn");
-                        console.log(buttons.length);
+//                        console.log(buttons.length);
                         
                         
                     };
