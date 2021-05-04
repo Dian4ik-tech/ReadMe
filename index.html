@@ -28,13 +28,13 @@ and open the template in the editor.
 
                     return array;
                   }
-                
                 var count = 0;
-                
+
                 var characters_1 = {"阿姨":"āyí", "啊":"a","矮": "ǎi", "爱":"ài",
                     "爱好":"àihào","安静":"ānjìng","班":"bān","半":"bàn","办法":"bànfǎ","帮忙":"bāngmáng"};
                 var characters = ["阿姨", "啊", "矮", "爱", "爱好", "安静","班", "半", "办法", "帮忙"];
                 var pinyin = [ "āyí", "a", "ǎi", "ài","àihào", "ānjìng","bān","bàn", "bànfǎ", "bāngmáng"];//
+            
             function myFunction() {
                 if (count!==0) { 
                     var list = document.getElementsByClassName("ButtOn");
@@ -49,6 +49,7 @@ and open the template in the editor.
                 var number = document.getElementById("fname").value;
                 document.getElementById('fname').value = '';//clears the textbox
 //              console.log(number);
+                
                 if(number%2===0){
                     var final_div = document.createElement("div");
                     final_div.className = "fDiv";
@@ -80,10 +81,7 @@ and open the template in the editor.
     //                        }
                             //console.log(j*number+i);
                             var numb = new_array[j*number+i];
-                            
-//                            if(numb_array.includes(numb)&&numb_array.includes(numb*10)){
-//                                
-//                            }else 
+                            var winning = 0;
                             if(numb_array.includes(numb)){
                                 var text = document.createTextNode(pinyin[numb]);
                                 numb_array.push(numb*10);
@@ -95,9 +93,9 @@ and open the template in the editor.
                             console.log(new_array);
                             //console.log(button.id);
                             //var odd_or_even = 1;
-                            var winning = 0;
+                            
                             button.onclick = ()=>{
-//                                console.log(button.id);
+//                              console.log(button.id);
                                 new_array_1.push(button.id);
                                 //new_array_1.push(numb_array[button.id]);
                                 button.style.backgroundColor="white";
@@ -110,6 +108,7 @@ and open the template in the editor.
                                     //if(numb_array[first]!==numb_array[second]){
                                     first_num = parseInt(first.split("on").pop());
 //                                    console.log(first_num);
+
                                     second_num = second.split("on").pop();
                                     if(new_array[first_num]!==new_array[second_num]){
                                         setTimeout(function(){
@@ -159,7 +158,8 @@ and open the template in the editor.
         <div id="laukums">          
             <label for="fname">Ievadi pāro skaitli:</label>
             <input type="text" id="fname" name="fname"><br><br>
-            <button onclick="myFunction()" id="try_it">Try it</button> 
+            <button onclick="myFunction()" id="try_it">Try it</button><br>
+<!--            <label for="fnam">Timer:</label>-->
         </div>
         
 <!--        <div class="btn-group">
