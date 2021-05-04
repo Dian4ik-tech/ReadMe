@@ -29,6 +29,10 @@
     font-size: 12px;
     letter-spacing: 5px;
   }
+  #navbar {
+  overflow: hidden;
+  background-color: #333;
+  }
   .navbar-nav  li a:hover {
     color: #1abc9c !important;
   }
@@ -63,6 +67,14 @@
     75%  {top: 50px;}
     100% {top: 0px;}
   }
+  .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.sticky + .content {
+  padding-top: 60px;
+}
   /*
    
 To change this license header, choose License Headers in Project Properties.
