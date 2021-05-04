@@ -14,16 +14,17 @@
 </head>
 <body>
 
-<nav class="navbar navbar-default">
-  <div class="container">
-    <div class="navbar-header">
+<nav id="navbar" class="navbar navbar-default" >
+    <div class="container" > 
+    <!--<div class="navbar-header">-->
+    <div class="navbar-header" id = "navbar">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                      
       </button>
       <a class="navbar-brand" href="#">Me</a>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
+    <div class="collapse navbar-collapse" >
       <ul class="nav navbar-nav navbar-right">
         <li><a href="https://www.w3schools.com/tags/tag_div.ASP">< div ></a></li>
         <li><a href="https://www.w3schools.com/tags/tag_span.asp">< span ></a></li>
@@ -31,7 +32,20 @@
     </div>
   </div>
 </nav>
-
+    <script>
+        window.onscroll = function() {myFunction()};
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        console.log(navbar);
+        console.log(sticky);
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+    </script>
 <div class="container-fluid bg-1 text-center">
   <h3>What is CSS?</h3>
    <a href = "https://www.w3schools.com/css/css_intro.asp"><img src="images/Screenshot_5.jpg" class="img_css" style="display:inline" alt="HTML" width="350" height="350"></a>
