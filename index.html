@@ -30,7 +30,7 @@ and open the template in the editor.
                   }
                 
                 var count = 0;
-                var new_array = new Array;
+                
                 var characters_1 = {"阿姨":"āyí", "啊":"a","矮": "ǎi", "爱":"ài",
                     "爱好":"àihào","安静":"ānjìng","班":"bān","半":"bàn","办法":"bànfǎ","帮忙":"bāngmáng"};
                 var characters = ["阿姨", "啊", "矮", "爱", "爱好", "安静","班", "半", "办法", "帮忙"];
@@ -54,7 +54,8 @@ and open the template in the editor.
                     final_div.className = "fDiv";
                     var number_array = [2,2];
                     var numb_array = [];
-                    for(var n=0;n < Math.floor(number*number/2);n++){
+                    //console.log(Math.floor(number*number/2));
+                    for(var n=0;n < (Math.floor(number*number/2))-1;n++){
                                 do{
                                    var rnd = Math.floor(Math.random()*10);  
                                 }while(number_array.includes(rnd))
@@ -64,12 +65,13 @@ and open the template in the editor.
                             }//creates the array with numbers, where every number is reapeated twice
                     var new_array = shuffle(number_array);
                     //var new_array = number_array;
+                    var new_array_1 = new Array;
                     for (j=0; j< number;j++){
        //               var nosauk="lauk"+j;
                         var newDiv = document.createElement("div");
                         for (i = 0; i < number; i++) {
                             let button = document.createElement('BUTTON');
-                            
+                            button.id = j*number+i;
                             button.className = "ButtOn";
                             //
     //                        while(rand_numbers!==rand||rand_numbers[rand]<2){
@@ -90,30 +92,37 @@ and open the template in the editor.
                                 //button.innerHTML = '<img src="images/"+characters[numb]+".jpg"]>';
                                 numb_array.push(numb);
                             }
-                            console.log(numb_array);
-                            var odd_or_even = 1;
+                            console.log(new_array);
+                            //console.log(button.id);
+                            //var odd_or_even = 1;
                             button.onclick = ()=>{
-                                console.log(numb);
-                                var ore = odd_or_even%2;
+                                console.log(button.id);
+                                new_array_1.push(button.id);
+                                //new_array_1.push(numb_array[button.id]);
                                 button.style.backgroundColor="white";
-                                if(ore==0){
-                                    var first =new_array.pop();
-                                    var second= new_array.pop();
+                                console.log(new_array_1.length);
+                                if(new_array_1.length==2){
+                                    var first = new_array_1.pop();
+                                    var second = new_array_1.pop();
                                     console.log(first);
                                     console.log(second);
-                                    if(first!==second){
+                                    id_1 = document.getElementById(first);
+                                    id_2 = document.getElementById(second);
+                                    //if(numb_array[first]!==numb_array[second]){
+                                    first_num = parseInt(first.split("on").pop());
+                                    console.log(first_num);
+                                    second_num = second.split("on").pop();
+                                    if(new_array[first_num]!==new_array[second_num]){
                                         setTimeout(function(){
-                                    button.style.backgroundColor = "black";
+                                            id_1.style.backgroundColor = "black";
+                                            id_2.style.backgroundColor = "black";
                                 },500);
                                     }
-                                }
-                                else{
-                                    new_array.push(numb);
                                 }
                                 
                                 
                                 //console.log(odd_or_even);
-                                odd_or_even++;
+                                //odd_or_even++;
                             }
                             
                             button.appendChild(text);
